@@ -7,7 +7,7 @@
 
 # Site settings
 title: Shepherd
-email: platform@bie-plc.com
+email: platform_group@bie-plc.com
 description: > # this means to ignore newlines until "baseurl:"
   请文艺青年为博客写个介绍.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
