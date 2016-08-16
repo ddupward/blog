@@ -17,6 +17,7 @@ github_username:  ddupward
 
 # Build settings
 markdown: kramdown
+permalink: /:title
 gems: ['jekyll-github-metadata']
 repository: ddupward/blog    #不配置这个选项，jekyll在本地regenerating的时候会报错：Error: No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.
 excerpt_separator: ""    #不配置这个选项，在编写markdown的时候，经常会包标签没有关闭的错误，官方给出的建议是配置该选项，值为空字符串
