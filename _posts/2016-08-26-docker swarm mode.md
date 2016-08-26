@@ -21,6 +21,7 @@ categories: docker swarm service
 ### 1、启动Docker daemon （每个节点）###
 
     $ docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &
+
 ### 2、选择一个节点，建立一个Swarm Manager ###
 
     $ docker swarm init --advertise-addr 192.168.10.181
@@ -100,11 +101,13 @@ Swarm mode集群搭建完毕，manager为192.168.10.181，worker为192.168.10.18
     $ docker service create --replicas 1 --name helloworld alpine ping docker.com
     8l2vt8iq80sv1ilvauz5pf9r2
 参数 --replicas 编译
+
 ### 2、查看正在运行的服务 ###
 
     $ docker service ls
     ID NAME REPLICAS  IMAGE   COMMAND
     8l2vt8iq80sv  helloworld  1/1   alpine  ping docker.com
+
 ### 3、查看某个服务的详细信息 ###
 
     $ docker service inspect --pretty helloworld
@@ -120,11 +123,13 @@ Swarm mode集群搭建完毕，manager为192.168.10.181，worker为192.168.10.18
      Image:		alpine
      Args:		ping docker.com
     Resources:
+
 ### 4、查看某个服务的运行情况 ###
 
     $ docker service ps helloworld
     ID NAME  IMAGE   NODE  DESIRED STATE  CURRENT STATE   ERROR
     9r7iwqv6oxeyehfl6pe9kheux  helloworld.1  alpine  bdcn-c03  Running Running 14 minutes ago
+
 ### 5、Swarm 集群的高可用 ###
 
 通常情况下，manager节点同时具有worker节点的职能。我们可以通过添加manager节点的数量，来提高整个Swarm集群的容错性。
@@ -137,6 +142,7 @@ manager节点的恢复：
 集群中大于一半以上数量的manager存活（(N/2)+1）
 
     $ docker swarm init --force-new-cluster --listen-addr <nodeip>:2377
+
 执行完毕以后，该节点会丢弃本节点之前的信息，重新继承现在集群的数据和工作。
 
 
