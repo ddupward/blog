@@ -9,3 +9,4 @@ codekit-config.json
 node_modules
 npm-debug.log*
 .idea
+./_config_old.yml

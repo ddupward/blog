@@ -11,9 +11,9 @@ title                    : "SHEPHERD"
 title_separator          : "-"
 name                     : "BEI NanJing"
 description              : "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
-url                      : "" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "ddupward/blog" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://ddupward.github.io" # the base hostname & protocol for your site
+repository               : "ddupward/blog" # GitHub username/repo-name
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
