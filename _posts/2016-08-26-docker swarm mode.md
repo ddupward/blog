@@ -137,7 +137,7 @@ manager节点的恢复：
 集群中大于一半以上数量的manager存活（(N/2)+1）
 
     $ docker swarm init --force-new-cluster --listen-addr <nodeip>:2377
-执行完毕以后，该节点会丢弃本节点之前的信息，重新继承现在集群的数据和工作
+执行完毕以后，该节点会丢弃本节点之前的信息，重新继承现在集群的数据和工作。
 
 
 
