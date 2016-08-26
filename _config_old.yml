@@ -1,0 +1,23 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Shepherd
+email: platform_group@bie-plc.com
+description: > # this means to ignore newlines until "baseurl:"
+  请文艺青年为博客写个介绍.
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://ddupward.github.io" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  ddupward
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+gems: ['jekyll-github-metadata']
+repository: ddupward/blog    #不配置这个选项，jekyll在本地regenerating的时候会报错：Error: No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.
+excerpt_separator: ""    #不配置这个选项，在编写markdown的时候，经常会包标签没有关闭的错误，官方给出的建议是配置该选项，值为空字符串

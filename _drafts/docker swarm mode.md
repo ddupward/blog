@@ -1,14 +1,12 @@
 ---
-layout: post
+layout: archive
 title:  "Docker Swarm mode 集群的搭建和使用"
-date:   2016-08-12 
-categories: docker swarm
+date:   2016-08-26
+author: lj
+categories: docker swarm 
 ---
 
-
-# Docker Swarm mode 集群的搭建和使用 
-
-## 准备 
+## 准备 ##
 
 - Docker 1.12.0 及以上 （确保用于搭建Swarm集群的Docker版本一致）
 - 三个及以上服务器节点
@@ -19,9 +17,12 @@ categories: docker swarm
 	- nodes:192.168.10.182、192.168.10.183
 
 ## 搭建步骤 ##
+
 ### 1、启动Docker daemon （每个节点）###
+
     $ docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &
 ### 2、选择一个节点，建立一个Swarm Manager ###
+
     $ docker swarm init --advertise-addr 192.168.10.181
     Swarm initialized: current node (dsaxvxxnkv6ngrim305f0ubfx) is now a manager.
     
@@ -44,6 +45,7 @@ categories: docker swarm
 
 
 ### 3、继续添加节点到Swarm中 ###
+
 添加一个worker node，我们转到另两个服务器：执行上面提示的命令：
     $ docker swarm join --token SWMTKN-1-1mw4m1geuldbfgm63cokadlu8ialptujb09j0w3mby1ocm6bd0-6rbak3tmc0x6kcvpqh6ka1qnp 192.168.10.181:2377
     This node joined a swarm as a worker.
@@ -93,14 +95,17 @@ Swarm mode集群搭建完毕，manager为192.168.10.181，worker为192.168.10.18
 ## 在Swarm Mode集群上面运行一个服务 ##
 
 ### 1、 hello-world ping###
+
     $ docker service create --replicas 1 --name helloworld alpine ping docker.com
     8l2vt8iq80sv1ilvauz5pf9r2
 参数 --replicas 编译
 ### 2、查看正在运行的服务 ###
+
     $ docker service ls
     ID NAME REPLICAS  IMAGE   COMMAND
     8l2vt8iq80sv  helloworld  1/1   alpine  ping docker.com
 ### 3、查看某个服务的详细信息 ###
+
     $ docker service inspect --pretty helloworld
     ID:		8l2vt8iq80sv1ilvauz5pf9r2
     Name:		helloworld
@@ -115,12 +120,14 @@ Swarm mode集群搭建完毕，manager为192.168.10.181，worker为192.168.10.18
      Args:		ping docker.com
     Resources:
 ### 4、查看某个服务的运行情况 ###
+
     $ docker service ps helloworld
     ID NAME  IMAGE   NODE  DESIRED STATE  CURRENT STATE   ERROR
     9r7iwqv6oxeyehfl6pe9kheux  helloworld.1  alpine  bdcn-c03  Running Running 14 minutes ago
 ### 5、Swarm 集群的高可用 ###
+
 通常情况下，manager节点同时具有worker节点的职能。我们可以通过添加manager节点的数量，来提高整个Swarm集群的容错性。
-当然，如果Swarm worker节点工作负载比较大，我们可以让manager节点只做manager，使它不具备worker节点的职能。
+当然，如果Swarm manager节点工作负载比较大，我们可以让manager节点只做manager，使它不具备worker节点的职能。
 让manager专注做manager的事情，可以使用命令：
     
     $ docker node update --availability drain <NODE-ID>

@@ -11,8 +11,10 @@ title                    : "SHEPHERD"
 title_separator          : "-"
 name                     : "BEI NanJing"
 description              : "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://ddupward.github.io" # the base hostname & protocol for your site
+#baseurl                  : "" # the subpath of your site, e.g. /blog
+#url                      : "" # the base hostname & protocol for your site
+baseurl                  : "/blog" # the subpath of your site, e.g. /blog
+url                      : "https://ddupward.github.io" # the base hostname & protocol for your site
 repository               : "ddupward/blog" # GitHub username/repo-name
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
