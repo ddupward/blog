@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: archive
 title:  "Windows环境下使用Jekyll发布GitHub Pages"
 date:   2016-08-09
 author: hycool
