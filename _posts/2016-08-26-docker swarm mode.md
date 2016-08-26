@@ -2,8 +2,8 @@
 layout: archive
 title:  "Docker Swarm mode 集群的搭建和使用"
 date:   2016-08-26
-author: lj
-categories: docker swarm 
+author: lijie
+categories: docker swarm service
 ---
 
 ## 准备 ##
@@ -92,6 +92,7 @@ Swarm mode集群搭建完毕，manager为192.168.10.181，worker为192.168.10.18
     ---参数信息省略---
 
 ----------
+
 ## 在Swarm Mode集群上面运行一个服务 ##
 
 ### 1、 hello-world ping###
