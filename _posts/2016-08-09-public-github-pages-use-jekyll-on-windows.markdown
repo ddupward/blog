@@ -50,7 +50,7 @@ gem install jekyll
 然而，实际上第三步是非必要的，笔者建议使用[Bundler](http://bundler.io/)安装并运行Jekyll！
 如果你安装第三步安装了Jekyll，然后安装官方文档的命令执行:
 
-{% highlight shell linenos %}
+{% highlight shell  %}
 jekyll build
 jekyll serve
 {% endhighlight %}
@@ -109,7 +109,7 @@ $ bundle exec jekyll serve --draft
 
 如果你的代码库尚未使用和创建过Jekyll静态资源页，那么请在代码仓库的Gemfile同级目录下执行
 
-{% highlight shell linenos %}
+{% highlight shell  %}
 $ bundle exec jekyll new . --force
 $ bundle exec jekyll serve
 {% endhighlight %}
