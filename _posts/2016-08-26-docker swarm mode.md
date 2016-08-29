@@ -1,9 +1,10 @@
 ---
-layout: archive
 title:  "Docker Swarm mode 集群的搭建和使用"
 date:   2016-08-26
-author: lijie
-categories: docker swarm service
+author: Li Jie
+header:
+  overlay_image: lijie/20160829001.jpg
+  overlay_filter: 0.5
 ---
 
 ## 准备 ##

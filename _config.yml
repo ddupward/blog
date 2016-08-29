@@ -4,7 +4,20 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
-
+#配置默认_post目录下采用的模板
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      show_author: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
 # Site Settings
 locale                   : "en"
 title                    : "SHEPHERD"
@@ -81,7 +94,7 @@ analytics:
 author:
   name             : "BIE NanJing"
   avatar           : "blacksheep.jpg"
-  bio              : "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.\r\n完美境地，非冗杂，而不遗。"
+  bio              : "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.<br/>完美境地，非冗杂，而不遗。"
   location         : "Nan Jing"
   email            :
   uri              :

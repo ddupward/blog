@@ -4,8 +4,8 @@
 # -----------------
 en: &DEFAULT_EN
   page                       : "Page"
-  pagination_previous        : "上一页"
-  pagination_next            : "下一页"
+  pagination_previous        : "<i class='fa fa-arrow-left'></i>"
+  pagination_next            : "<i class='fa fa-arrow-right'></i>"
   breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
   toc_label                  : "On This Page"

@@ -1,9 +1,10 @@
 ---
-layout: archive
 title:  "Windows环境下使用Jekyll发布GitHub Pages"
 date:   2016-08-09
-author: hycool
-categories: github page jekyll windows
+author: Huai Yang
+header:
+  overlay_image: hy/20160829001.png
+  overlay_filter: 0.5
 ---
 
 ## 前言
@@ -60,7 +61,7 @@ jekyll serve
 **_Bing Go!_**
 <br/>
 
-![versions of tools]({{ site.baseurl }}/assets/hy/20160812001.png)
+![versions of tools]({{ site.baseurl }}/images/hy/20160812001.png)
 
 ## 第二步 : 安装并运行Jekyll
 
