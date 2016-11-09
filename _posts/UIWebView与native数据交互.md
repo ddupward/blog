@@ -1,4 +1,11 @@
 #UIWebView与native数据交互
+
+---
+title:  "UIWebView与iOS native数据交互"
+date:   2016-11-09
+author: winbo
+---
+
 ## 背景
 我们在APP的开发中，一定会有某些页面是用js来写的。因为js跨平台，开发成本相对较低等等很多方面的优势。我们在iOS中一般是通过UIWebView来展示一个HTML页面，那么我们在UIWebView中与native的数据交互就显得尤其的重要。比如在js中如何获取到手机的一些参数，位置信息，设备信息。同样，我们也可能需要从UIWebView中传递一些数据到native中，那么我们就需要有一套UIWebView与native的交互方案可以使得在UIWebView与native进行数据交互。
 ## 方案
